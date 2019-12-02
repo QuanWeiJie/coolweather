@@ -1,6 +1,7 @@
 package com.coolweather.android;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -85,6 +86,13 @@ public class ChooseAreaFragment extends Fragment {
                 else if (currentLevel == LEVEL_CITY){
                     selectedCity = cityList.get(position);
                     queryCounties();
+                }else if(currentLevel == LEVEL_COUNTY){  //如果当前级别是Country就启动WeatherActivity,并把当前选中的天气ID传递过去
+                    String weatherId = countyList.get(position).getWeatherId();
+                    Intent intent = new Intent(getActivity(),WeatherActivity.class);
+                    intent.putExtra("weather_id",weatherId);
+                    startActivity(intent);
+                    getActivity().finish();
+
                 }
             }
         });
@@ -220,6 +228,10 @@ public class ChooseAreaFragment extends Fragment {
                         }
                     });
                 }
+
+
+
+
             }
         });
     }
