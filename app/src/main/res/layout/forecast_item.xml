@@ -19,8 +19,15 @@
         android:id="@+id/info_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="left"
         android:layout_weight="1"
+        android:gravity="left"
+        android:textColor="#fff"/>
+    <ImageView
+        android:id="@+id/info_Image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
         android:gravity="center"
         android:textColor="#fff"/>
     <!--最高温度-->

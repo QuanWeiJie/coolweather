@@ -11,13 +11,19 @@ public class Suggestion {
     public class Comfort {
         @SerializedName("txt")
         public String info;
+        @SerializedName("brf")
+        public String status;
     }
     public class CarWash{
         @SerializedName("txt")
         public String info;
+        @SerializedName("brf")
+        public String status;
     }
     public class Sport{
         @SerializedName("txt")
         public String info;
+        @SerializedName("brf")
+        public String status;
     }
 }
